@@ -1,14 +1,17 @@
+import os
+
 from vpc import Vpc
 from rds import Rds
 from cluster import Cluster
 from batch import Batch
 
-
 from aws_cdk.core import App, Environment, Stack
 
-app = App()
+ACCOUNT = os.environ["ACCOUNT"]
 
-env = Environment(account="867640704278", region="eu-west-1")
+app = App()
+env = Environment(account=ACCOUNT, region="eu-west-1")
+
 stack = Stack(app, "airflow", env=env)
 
 vpc = Vpc(stack, "vpc")
