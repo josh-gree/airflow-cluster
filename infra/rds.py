@@ -6,11 +6,8 @@ from aws_cdk.aws_ec2 import (
     InstanceClass,
     InstanceSize,
     InstanceType,
-    SecurityGroup,
-    Peer,
-    Port,
-    SubnetType,
 )
+from aws_cdk.aws_ssm import StringListParameter
 
 from vpc import Vpc
 
@@ -21,10 +18,14 @@ PORT = 5432
 
 
 class Rds(Construct):
+    @property
+    def uri(self):
+        return f"postgres://{USER}:{PASSWORD}@{self.rds.db_instance_endpoint_address}:{PORT}/{DATABASE}"
+
     def __init__(self, scope: Construct, id: str, vpc: Vpc, **kwargs) -> None:
         super().__init__(scope, id, **kwargs)
 
-        rds = DatabaseInstance(
+        self.rds = DatabaseInstance(
             self,
             "rds",
             master_username=USER,
@@ -35,13 +36,11 @@ class Rds(Construct):
             port=PORT,
             instance_type=InstanceType.of(InstanceClass.BURSTABLE3, InstanceSize.MICRO),
             security_groups=[vpc.sg_rds],
-            vpc_subnets={
-                "subnet_type": SubnetType.PUBLIC
-            },  # Anyone can access for now! REMOVE THIS
+            deletion_protection=False,
         )
 
         CfnOutput(
             self,
             "rds_address",
-            value=f"postgres://{USER}:{PASSWORD}@{rds.db_instance_endpoint_address}:{PORT}/{DATABASE}",
+            value=f"postgres://{USER}:{PASSWORD}@{self.rds.db_instance_endpoint_address}:{PORT}/{DATABASE}",
         )
