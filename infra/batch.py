@@ -1,5 +1,4 @@
-from aws_cdk.core import Construct, RemovalPolicy
-from aws_cdk.aws_s3 import Bucket
+from aws_cdk.core import Construct
 
 
 class Batch(Construct):
