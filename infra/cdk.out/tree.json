@@ -1,0 +1,115 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree"
+      },
+      "airflow": {
+        "id": "airflow",
+        "path": "airflow",
+        "children": {
+          "vpc": {
+            "id": "vpc",
+            "path": "airflow/vpc",
+            "children": {
+              "b": {
+                "id": "b",
+                "path": "airflow/vpc/b",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "airflow/vpc/b/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                      "aws:cdk:cloudformation:props": {}
+                    }
+                  },
+                  "Notifications": {
+                    "id": "Notifications",
+                    "path": "airflow/vpc/b/Notifications"
+                  }
+                }
+              }
+            }
+          },
+          "rds": {
+            "id": "rds",
+            "path": "airflow/rds",
+            "children": {
+              "b": {
+                "id": "b",
+                "path": "airflow/rds/b",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "airflow/rds/b/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                      "aws:cdk:cloudformation:props": {}
+                    }
+                  },
+                  "Notifications": {
+                    "id": "Notifications",
+                    "path": "airflow/rds/b/Notifications"
+                  }
+                }
+              }
+            }
+          },
+          "batch": {
+            "id": "batch",
+            "path": "airflow/batch",
+            "children": {
+              "b": {
+                "id": "b",
+                "path": "airflow/batch/b",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "airflow/batch/b/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                      "aws:cdk:cloudformation:props": {}
+                    }
+                  },
+                  "Notifications": {
+                    "id": "Notifications",
+                    "path": "airflow/batch/b/Notifications"
+                  }
+                }
+              }
+            }
+          },
+          "cluster": {
+            "id": "cluster",
+            "path": "airflow/cluster",
+            "children": {
+              "b": {
+                "id": "b",
+                "path": "airflow/cluster/b",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "airflow/cluster/b/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                      "aws:cdk:cloudformation:props": {}
+                    }
+                  },
+                  "Notifications": {
+                    "id": "Notifications",
+                    "path": "airflow/cluster/b/Notifications"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

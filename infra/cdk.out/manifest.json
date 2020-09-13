@@ -1,0 +1,101 @@
+{
+  "version": "5.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "airflow": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://867640704278/eu-west-1",
+      "properties": {
+        "templateFile": "airflow.template.json"
+      },
+      "metadata": {
+        "/airflow/vpc/b/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcb000A014E",
+            "trace": [
+              "new Bucket (/private/var/folders/9g/dbtq5pms421_ln7tpkvk1y780000gq/T/jsii-kernel-kWVDYI/node_modules/@aws-cdk/aws-s3/lib/bucket.js:421:26)",
+              "/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:49",
+              "Kernel._wrapSandboxCode (/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8417:20)",
+              "Kernel._create (/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:26)",
+              "Kernel.create (/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7676:21)",
+              "KernelHost.processRequest (/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7456:28)",
+              "KernelHost.run (/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7394:14)",
+              "Immediate._onImmediate (/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7397:37)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/airflow/rds/b/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "rdsbB03387F9",
+            "trace": [
+              "new Bucket (/private/var/folders/9g/dbtq5pms421_ln7tpkvk1y780000gq/T/jsii-kernel-kWVDYI/node_modules/@aws-cdk/aws-s3/lib/bucket.js:421:26)",
+              "/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:49",
+              "Kernel._wrapSandboxCode (/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8417:20)",
+              "Kernel._create (/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:26)",
+              "Kernel.create (/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7676:21)",
+              "KernelHost.processRequest (/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7456:28)",
+              "KernelHost.run (/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7394:14)",
+              "Immediate._onImmediate (/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7397:37)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/airflow/batch/b/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "batchb74FB2F44",
+            "trace": [
+              "new Bucket (/private/var/folders/9g/dbtq5pms421_ln7tpkvk1y780000gq/T/jsii-kernel-kWVDYI/node_modules/@aws-cdk/aws-s3/lib/bucket.js:421:26)",
+              "/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:49",
+              "Kernel._wrapSandboxCode (/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8417:20)",
+              "Kernel._create (/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:26)",
+              "Kernel.create (/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7676:21)",
+              "KernelHost.processRequest (/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7456:28)",
+              "KernelHost.run (/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7394:14)",
+              "Immediate._onImmediate (/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7397:37)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/airflow/cluster/b/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "clusterb95902872",
+            "trace": [
+              "new Bucket (/private/var/folders/9g/dbtq5pms421_ln7tpkvk1y780000gq/T/jsii-kernel-kWVDYI/node_modules/@aws-cdk/aws-s3/lib/bucket.js:421:26)",
+              "/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:49",
+              "Kernel._wrapSandboxCode (/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:8417:20)",
+              "Kernel._create (/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7932:26)",
+              "Kernel.create (/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7676:21)",
+              "KernelHost.processRequest (/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7456:28)",
+              "KernelHost.run (/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7394:14)",
+              "Immediate._onImmediate (/Users/hj/src/airflow-cluster/.venv/lib/python3.8/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7397:37)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/cloud-assembly-schema": "1.62.0",
+      "@aws-cdk/cx-api": "1.62.0",
+      "@aws-cdk/core": "1.62.0",
+      "@aws-cdk/region-info": "1.62.0",
+      "@aws-cdk/aws-iam": "1.62.0",
+      "@aws-cdk/aws-events": "1.62.0",
+      "@aws-cdk/aws-kms": "1.62.0",
+      "@aws-cdk/aws-s3": "1.62.0",
+      "jsii-runtime": "Python/3.8.5"
+    }
+  }
+}
