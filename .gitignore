@@ -139,6 +139,7 @@ cython_debug/
 
 # AWS cdk
 cdk.out
+cdk.context.json
 
 # vscode
 .vscode
